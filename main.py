@@ -21,7 +21,11 @@ monster_powers = {
     "Freeze Time": 4,
     "Super Hearing": 6
 }
-
+special_attacks = [
+    {"name": "Final Slash", "condition": 0.15, "damageBoost": 5},
+    {"name": "Second Chance", "condition": 0.10, "healPoint": 10}
+]
+special_attack_used = False
 # Define the number of stars to award the player
 num_stars = 0
 
@@ -200,6 +204,37 @@ if not input_invalid:
     print("    ------------------------------------------------------------------")
     print("    |    You meet the monster. FIGHT!!")
     while m_health_points > 0 and health_points > 0:
+
+        # Special Attack
+        hp_percent = health_points / 20
+        if not special_attack_used:
+            available_specials = [atk for atk in special_attacks if hp_percent <= atk["condition"]]
+
+            if available_specials:
+                print("    |    Special Attack available!")
+                for i, atk in enumerate(available_specials):
+                    print(f"    |    {i+1}. {atk['name']}")
+
+                print("    |", end="    ")
+                choice = input("Enter which Special Attack to use (1, 2): ")
+
+                try:
+                    choice = int(choice)
+                    selected = available_specials[choice - 1]
+
+                    if "damageBoost" in selected:
+                        print(f"    |    Using {selected['name']}!")
+                        m_health_points -= (combat_strength + selected["damageBoost"])
+                        special_attack_used = True
+
+                    elif "healPoint" in selected:
+                        print(f"    |    Using {selected['name']}! Healing for {selected['healPoint']} HP!")
+                        health_points = min(20, health_points + selected["healPoint"])
+                        special_attack_used = True
+
+                except:
+                    print("    |    Skipping special attack.")
+        
         # Fight Sequence
         print("    |", end="    ")
 

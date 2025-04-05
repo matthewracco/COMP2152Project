@@ -199,6 +199,21 @@ if not input_invalid:
                 print("health points: " + str(health_points))
         print("num_dream_lvls: ", num_dream_lvls)
 
+        # Random Environmental Event Feature
+        print("    ------------------------------------------------------------------")
+        print("    |    You prepare for battle... Let's see if anything unexpected happens!")
+        if random.randint(1, 5) == 1:
+            event = random.choice([
+                "A sudden gust of wind blows debris onto the battlefield, lowering your strength!",
+                "A cloud of smoke appears, momentarily reducing visibility, making it harder to strike!",
+                "The ground shakes, momentarily throwing you off balance!"
+            ])
+            print("    |    " + event)
+            
+            combat_strength -= 1
+            combat_strength = max(combat_strength, 1)
+            print("    |    Your attack strength has been temporarily reduced due to the environmental event!")
+
     # Fight Sequence
     # Loop while the monster and the player are alive. Call fight sequence functions
     print("    ------------------------------------------------------------------")

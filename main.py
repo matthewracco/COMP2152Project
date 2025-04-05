@@ -22,8 +22,8 @@ monster_powers = {
     "Super Hearing": 6
 }
 special_attacks = [
-    {"name": "Final Slash", "condition": 0.15, "damageBoost": 5},
-    {"name": "Second Chance", "condition": 0.10, "healPoint": 10}
+    {"name": "Final Slash", "condition": 0.35, "damageBoost": 5},
+    {"name": "Second Chance", "condition": 0.30, "healPoint": 10}
 ]
 special_attack_used = False
 # Define the number of stars to award the player

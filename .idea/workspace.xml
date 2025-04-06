@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74b9865c-eea8-469c-b756-eed04e5e30dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/COMP2152Project-master/feature.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/COMP2152Project-master/functions_lab06_solution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/COMP2152Project-master/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/COMP2152Project-master/save.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +37,7 @@
     "Python.main (1).executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "randomchance",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/comp2152/project",
     "node.js.detected.package.eslint": "true",
@@ -128,7 +119,7 @@
       <updated>1743868544665</updated>
       <workItem from="1743868545771" duration="986000" />
       <workItem from="1743877517588" duration="4167000" />
-      <workItem from="1743951550003" duration="2985000" />
+      <workItem from="1743951550003" duration="4674000" />
     </task>
     <servers />
   </component>

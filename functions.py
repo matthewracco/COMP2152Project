@@ -17,6 +17,9 @@ def use_loot(belt, health_points):
     elif first_item in bad_loot_options:
         health_points = max(0, (health_points - 2))
         print("    |    You used " + first_item + " to hurt your health to " + str(health_points))
+    elif first_item == "Elemental Shield":
+        belt.append(first_item)
+        print("    |    You keep the Elemental Shield for protection later.")
     else:
         print("    |    You used " + first_item + " but it's not helpful")
     return belt, health_points

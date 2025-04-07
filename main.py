@@ -12,7 +12,7 @@ big_dice_options = list(range(1, 21))
 weapons = ["Fist", "Knife", "Club", "Gun", "Bomb", "Nuclear Bomb"]
 
 # Define the Loot
-loot_options = ["Health Potion", "Poison Potion", "Secret Note", "Leather Boots", "Flimsy Gloves"]
+loot_options = ["Health Potion", "Poison Potion", "Secret Note", "Leather Boots", "Flimsy Gloves","Elemental Shield"]
 belt = []
 
 # Define the Monster's Powers
@@ -173,6 +173,23 @@ if not input_invalid:
     m_combat_strength += min(6, m_combat_strength + monster_powers[power_roll])
     print("    |    The monster's combat strength is now " + str(
         m_combat_strength) + " using the " + power_roll + " magic power")
+  
+    # Elemental Shield Feature 
+if "Elemental Shield" in belt:
+    print("    ------------------------------------------------------------------")
+    print("    |    You possess the Elemental Shield! Rolling to see if it activates...")
+    if random.choice([True, False]):
+        print(f"    |    🛡️ Elemental Shield activates! The monster's {power_roll} magic is nullified!")
+        print(f"    |    The monster's magic power ({power_roll}) has no effect.")
+    else:
+        print("    |    Elemental Shield failed to activate.")
+        m_combat_strength += min(6, monster_powers[power_roll])
+        print("    |    The monster's combat strength is now " + str(m_combat_strength) + " using the " + power_roll + " magic power")
+else:
+    m_combat_strength += min(6, monster_powers[power_roll])
+    print("    |    The monster's combat strength is now " + str(m_combat_strength) + " using the " + power_roll + " magic power")
+
+    
 
     # Lab Week 06 - Question 6
     num_dream_lvls = -1 # Initialize the number of dream levels
